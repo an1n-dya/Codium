@@ -1,0 +1,3 @@
+[submodule "Codium/vendor/spdlog"]
+	path = Codium/vendor/spdlog
+	url = https://github.com/gabime/spdlog
