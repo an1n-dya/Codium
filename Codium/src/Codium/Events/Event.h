@@ -1,5 +1,7 @@
 #pragma once
 
+#include "cepch.h"
+
 #include "Codium/Core.h"
 
 namespace Codium {
