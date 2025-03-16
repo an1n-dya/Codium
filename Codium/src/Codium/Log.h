@@ -4,6 +4,7 @@
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Codium {
 	class CODIUM_API Log {
@@ -25,8 +26,8 @@ namespace Codium {
 #define CE_CORE_FATAL(...)    ::Codium::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
 // Client log macros
-#define CE_TRACE(...)	      ::Codium::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define CE_INFO(...)	      ::Codium::Log::GetClientLogger()->info(__VA_ARGS__)
-#define CE_WARN(...)	      ::Codium::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define CE_ERROR(...)	      ::Codium::Log::GetClientLogger()->error(__VA_ARGS__)
-#define CE_FATAL(...)	      ::Codium::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define CE_TRACE(...)         ::Codium::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define CE_INFO(...)          ::Codium::Log::GetClientLogger()->info(__VA_ARGS__)
+#define CE_WARN(...)          ::Codium::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define CE_ERROR(...)         ::Codium::Log::GetClientLogger()->error(__VA_ARGS__)
+#define CE_FATAL(...)         ::Codium::Log::GetClientLogger()->fatal(__VA_ARGS__)
