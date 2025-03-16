@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Codium {
 	class CODIUM_API KeyEvent : public Event {
 	public:

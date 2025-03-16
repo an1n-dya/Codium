@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Codium {
 	class CODIUM_API MouseMovedEvent : public Event {
 	public:
