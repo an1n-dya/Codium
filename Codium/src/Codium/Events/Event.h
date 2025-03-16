@@ -1,9 +1,8 @@
 #pragma once
 
-#include "Codium/Core.h"
+#include "cepch.h"
 
-#include <string>
-#include <functional>
+#include "Codium/Core.h"
 
 namespace Codium {
 	// Events in Codium are currently blocking, meaning when an event occurs it
