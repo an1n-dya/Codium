@@ -44,6 +44,21 @@ project "Codium"
 			"{MKDIR} ../bin/" .. outputdir .. "/Sandbox",
     		"{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox/"
 		}
+		
+	filter "system:linux"
+		cppdialect "C++17"
+		staticruntime "On"
+		pic "On"
+		
+		defines {
+			"CE_PLATFORM_LINUX",
+			"CE_BUILD_DLL"
+		}
+		
+		postbuildcommands {
+			"{MKDIR} ../bin/" .. outputdir .. "/Sandbox",
+			"{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox/"
+		}
 
 	filter "configurations:Debug"
 		defines "CE_DEBUG"
@@ -89,6 +104,14 @@ project "Sandbox"
 		defines {
 			"CE_PLATFORM_WINDOWS"
 		}
+		
+	filter "system:linux"
+		cppdialect "C++17"
+		staticruntime "On"
+		
+		defines {
+			"CE_PLATFORM_LINUX"
+		}
 
 	filter "configurations:Debug"
 		defines "CE_DEBUG"
@@ -101,4 +124,3 @@ project "Sandbox"
 	filter "configurations:Dist"
 		defines "CE_DIST"
 		optimize "On"
-        
