@@ -4,7 +4,7 @@
 
 #include <sstream>
 
-namespace Hazel {
+namespace Codium {
 	class CODIUM_API KeyEvent : public Event {
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; }

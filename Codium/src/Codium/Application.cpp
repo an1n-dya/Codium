@@ -11,11 +11,11 @@ namespace Codium {
 	void Application::Run() {
 		WindowResizeEvent e(1280, 720);
 		if (e.IsInCategory(EventCategoryApplication)) {
-			CE_TRACE(e);
+			CE_TRACE("{0}", e.ToString());
 		}
 
 		if (e.IsInCategory(EventCategoryInput)) {
-			CE_TRACE(e);
+			CE_TRACE("{0}", e.ToString());
 		}
 
 		while (true);
