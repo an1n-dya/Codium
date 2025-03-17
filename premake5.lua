@@ -40,8 +40,7 @@ project "Codium"
 	}
 
 	links {
-		"GLFW",
-		"opengl32.lib"
+		"GLFW"
 	}
 
 	filter "system:windows"
@@ -54,6 +53,10 @@ project "Codium"
 		defines {
 			"CE_PLATFORM_WINDOWS",
 			"CE_BUILD_DLL"
+		}
+
+		links {
+			"opengl32.lib"
 		}
 
 		postbuildcommands {
@@ -69,6 +72,14 @@ project "Codium"
 		defines {
 			"CE_PLATFORM_LINUX",
 			"CE_BUILD_DLL"
+		}
+		
+		links {
+			"GLFW",
+			"GL",
+			"X11",
+			"pthread",
+			"dl"
 		}
 		
 		postbuildcommands {
