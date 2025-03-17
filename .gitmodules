@@ -1,3 +1,6 @@
 [submodule "Codium/vendor/spdlog"]
 	path = Codium/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Codium/vendor/GLFW"]
+	path = Codium/vendor/GLFW
+	url = https://github.com/an1n-dya/glfw.git
