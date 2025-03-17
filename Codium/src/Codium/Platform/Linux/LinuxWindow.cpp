@@ -4,10 +4,6 @@
 namespace Codium {
     static bool s_GLFWInitialized = false;
 
-    Window* Window::Create(const WindowProps& props) {
-        return new LinuxWindow(props);
-    }
-
     LinuxWindow::LinuxWindow(const WindowProps& props) {
         Init(props);
     }
