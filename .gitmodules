@@ -4,3 +4,6 @@
 [submodule "Codium/vendor/GLFW"]
 	path = Codium/vendor/GLFW
 	url = https://github.com/an1n-dya/glfw.git
+[submodule "Codium/vendor/imgui"]
+	path = Codium/vendor/imgui
+	url = https://github.com/an1n-dya/imgui

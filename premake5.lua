@@ -15,9 +15,11 @@ startproject "Sandbox"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Codium/vendor/GLFW/include"
 IncludeDir["Glad"] = "Codium/vendor/Glad/include"
+IncludeDir["ImGui"] = "Codium/vendor/imgui"
 
 include "Codium/vendor/GLFW"
 include "Codium/vendor/Glad"
+include "Codium/vendor/imgui"
 
 project "Codium"
 	location "Codium"
@@ -39,12 +41,14 @@ project "Codium"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links {
 		"GLFW",
-		"Glad"
+		"Glad",
+		"ImGui"
 	}
 
 	filter "system:windows"
