@@ -11,6 +11,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 startproject "Sandbox"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Codium/vendor/GLFW/include"
+
+include "Codium/vendor/GLFW"
+
 project "Codium"
 	location "Codium"
 	kind "SharedLib"
@@ -29,7 +35,12 @@ project "Codium"
 
 	includedirs {
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links {
+		"GLFW"
 	}
 
 	filter "system:windows"
@@ -42,6 +53,10 @@ project "Codium"
 		defines {
 			"CE_PLATFORM_WINDOWS",
 			"CE_BUILD_DLL"
+		}
+
+		links {
+			"opengl32.lib"
 		}
 
 		postbuildcommands {
@@ -57,6 +72,14 @@ project "Codium"
 		defines {
 			"CE_PLATFORM_LINUX",
 			"CE_BUILD_DLL"
+		}
+		
+		links {
+			"GLFW",
+			"GL",
+			"X11",
+			"pthread",
+			"dl"
 		}
 		
 		postbuildcommands {
