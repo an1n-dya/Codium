@@ -2,6 +2,7 @@
 
 // For use by applications
 #include "Codium/Application.h"
+#include "Codium/Layer.h"
 #include "Codium/Log.h"
 
 // ---Entry Point---------------------

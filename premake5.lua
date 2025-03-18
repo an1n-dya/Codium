@@ -89,14 +89,35 @@ project "Codium"
 
 	filter "configurations:Debug"
 		defines "CE_DEBUG"
+
+		filter "system:windows"
+			buildoptions "/MDd"
+		filter "system:linux"
+			buildoptions { "-D_DEBUG" }
+			links { "pthread" }
+		
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "CE_RELEASE"
+
+		filter "system:windows"
+			buildoptions "/MD"
+		filter "system:linux"
+			buildoptions { "-DNDEBUG" }
+			links { "pthread" }
+
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "CE_DIST"
+		
+		filter "system:windows"
+			buildoptions "/MD"
+		filter "system:linux"
+			buildoptions { "-DNDEBUG" }
+			links { "pthread" }
+
 		optimize "On"
 
 project "Sandbox"
@@ -142,12 +163,33 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "CE_DEBUG"
+
+		filter "system:windows"
+			buildoptions "/MDd"
+		filter "system:linux"
+			buildoptions { "-D_DEBUG" }
+			links { "pthread" }
+
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "CE_RELEASE"
+
+		filter "system:windows"
+			buildoptions "/MD"
+		filter "system:linux"
+			buildoptions { "-DNDEBUG" }
+			links { "pthread" }
+
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "CE_DIST"
+
+		filter "system:windows"
+			buildoptions "/MD"
+		filter "system:linux"
+			buildoptions { "-DNDEBUG" }
+			links { "pthread" }
+
 		optimize "On"
