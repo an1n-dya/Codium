@@ -2,6 +2,7 @@
 #include "Application.h"
 
 #include "Codium/Log.h"
+#include "Events/EventFormatter.h"
 
 #include <GLFW/glfw3.h>
 
