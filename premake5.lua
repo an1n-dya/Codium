@@ -14,8 +14,10 @@ startproject "Sandbox"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Codium/vendor/GLFW/include"
+IncludeDir["Glad"] = "Codium/vendor/Glad/include"
 
 include "Codium/vendor/GLFW"
+include "Codium/vendor/Glad"
 
 project "Codium"
 	location "Codium"
@@ -36,11 +38,13 @@ project "Codium"
 	includedirs {
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links {
-		"GLFW"
+		"GLFW",
+		"Glad"
 	}
 
 	filter "system:windows"
@@ -52,7 +56,8 @@ project "Codium"
 
 		defines {
 			"CE_PLATFORM_WINDOWS",
-			"CE_BUILD_DLL"
+			"CE_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		links {
@@ -71,7 +76,8 @@ project "Codium"
 		
 		defines {
 			"CE_PLATFORM_LINUX",
-			"CE_BUILD_DLL"
+			"CE_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 		
 		links {
