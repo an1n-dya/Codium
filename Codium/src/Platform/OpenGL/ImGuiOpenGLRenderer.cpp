@@ -173,7 +173,7 @@
 // Changes to this backend using new APIs should be accompanied by a regenerated stripped loader version.
 #define IMGL3W_IMPL
 #define IMGUI_IMPL_OPENGL_LOADER_IMGL3W
-#include "ImGuiOpenGLRenderer.h"
+#include "ImGuiOpenGLRendererLoader.h"
 #endif
 
 // Vertex arrays are not supported on ES2/WebGL1 unless Emscripten which uses an extension
