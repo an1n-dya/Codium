@@ -5,6 +5,8 @@
 #include "Codium/Layer.h"
 #include "Codium/Log.h"
 
+#include "Codium/ImGui/ImGuiLayer.h"
+
 // ---Entry Point---------------------
 #include "Codium/EntryPoint.h"
 // -----------------------------------

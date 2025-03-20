@@ -20,6 +20,7 @@ class Sandbox : public Codium::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Codium::ImGuiLayer());
 	}
 
 	~Sandbox() { }

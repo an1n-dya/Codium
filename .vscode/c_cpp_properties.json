@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/Codium/src",
+                "${workspaceFolder}/Codium/vendor/spdlog/include",
+                "${workspaceFolder}/Codium/vendor/GLFW/include",
+                "${workspaceFolder}/Codium/vendor/Glad/include",
+                "${workspaceFolder}/Codium/vendor/imgui"
+            ],
+            "defines": [],
+            "compilerPath": "/sbin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
