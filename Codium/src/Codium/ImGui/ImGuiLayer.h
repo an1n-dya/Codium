@@ -6,6 +6,8 @@
 #include "Codium/Events/KeyEvent.h"
 #include "Codium/Events/MouseEvent.h"
 
+#include "imgui.h"
+
 namespace Codium {
 	class CODIUM_API ImGuiLayer : public Layer {
 	public:
@@ -25,6 +27,8 @@ namespace Codium {
 		bool OnKeyReleasedEvent(KeyReleasedEvent& e);
 		bool OnKeyTypedEvent(KeyTypedEvent& e);
 		bool OnWindowResizeEvent(WindowResizeEvent& e);
+		
+		ImGuiKey GlfwKeyToImGuiKey(int key);
 	private:
 		float m_Time = 0.0f;
 	};
