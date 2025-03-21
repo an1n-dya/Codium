@@ -6,7 +6,7 @@
 #include "Codium/Events/KeyEvent.h"
 #include "Codium/Events/MouseEvent.h"
 
-#include "imgui.h"
+enum ImGuiKey : int;
 
 namespace Codium {
 	class CODIUM_API ImGuiLayer : public Layer {
